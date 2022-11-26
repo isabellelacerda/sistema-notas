@@ -3,7 +3,6 @@
 }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
     background-color: #fafbfc;
 }
 
@@ -73,10 +72,6 @@ table {
 table th {
     background-color: rgb(47, 111, 69);
     color:#fff;
-}
-
-table td img {
-    width: 20px;
 }
 
 .center {
