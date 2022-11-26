@@ -4,78 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Notas</title>
-    <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/script.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Alunos</title>
 </head>
 <body>
-
     <header>
-       <h1>Lançamento de Notas</h1> 
-    </header>
-
-    <main>
-        <div class="title">
-
-            <h2>Cadastro do aluno</h2>
-            <span>Digite as informações do aluno conforme solicitado no formulário abaixo.
-            </span>
-
-        </div>
-
-        <div class="card">
-            <div class="lineInput">
-                <label for="">Aluno</label>
-                <input type="text" id="aluno" placeholder="Nome completo">
-            </div>
-            <div class="lineInput">
-                <label for="">Matrícula</label>
-                <input type="text" id="matricula" placeholder="Matrícula">
-            </div>
-            <div class="lineInput">
-                <label for="">Nota 1</label>
-                <input type="number" min="0" max="10" id="nota1" placeholder="Primeira nota">
-            </div>
-            <div class="lineInput">
-                <label for="">Nota 2</label>
-                <input type="number" min="0" max="10" id="nota2" placeholder="Segunda nota">
-            </div>
-            <div class="lineInput">
-                <label for="">Nota 3</label>
-                <input type="number" min="0" max="10" id="nota3" placeholder="Terceira nota">
-            </div>
-            
-
-            <button onclick="aluno.salvar()">Salvar</button>
-            <button onclick="aluno.limpar()">Limpar</button>
-        </div>
-
-        <div class="content">
-            <table border="1">
-                <thead>
-                    <th>Aluno</th>
-                    <th>Matrícula</th>
-                    <th>Nota 1</th>
-                    <th>Nota 2</th>
-                    <th>Nota 3</th>
-                    <th>Média</th>
-                    <th>Opções</th>
-                </thead>
-                <tbody id="tbody">
-                   
-                </tbody>
-            </table>
-        </div>
-            
-        
-    </main>
+        <h1>Lançamento de Notas</h1> 
+     </header>
  
+     <main>
+         <div class="title">
+ 
+             <h2>Cadastro do aluno</h2>
+             <span>Digite as informações do aluno conforme solicitado no formulário abaixo.
+             </span>
+         </div>
+    <main>
+        <div class="card">
+    <form action="">
+        <fieldset>
+            
+                <div class="lineInput">
+                    <label for="nome">Nome:</label>
+                    <input class="text-area large" type="text" id="nome" name="nome" placeholder="Nome e sobrenome">
+                </div>
+                <div class="lineInput">
+                    <label for="matricula">Matrícula:</label>
+                    <input class="text-area large" type="text" id="matricula" name="matricula" placeholder="Ex. 000000">
+                </div>
+                 
+                <div class="lineInput">
+                    <label for="nota1">Nota 1:</label>
+                    <input class="number-area large" type="number" min="0" max="10" id="nota1" name="nota1" placeholder="Primeira nota do aluno" step="any">
+                </div>
+                <div class="lineInput">
+                    <label for="nota2">Nota 2:</label>
+                    <input class="number-area large" type="number" min="0" max="10" id="nota2" name="nota2" placeholder="Segunda nota do aluno" step="any">
+                </div>
+                <div class="lineInput">
+                    <label for="nota3">Nota 3:</label>
+                    <input class="number-area large" type="number" min="0" max="10" id="nota3" name="nota3" placeholder="Terceira nota do aluno" step="any">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <div>
+        <button onclick="aluno.salvar()">Salvar</button>
+        <button onclick="aluno.limpar()">Limpar</button>
+    </div>
+</div>
+    
+    <div class="content">
+        <table border="1">
+            <thead>
+                <th>Aluno</th>
+                <th>Matrícula</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Média</th>
+                <th>Situação</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    </main>
+
+    <script src="media.js"></script>
 </body>
 </html>
